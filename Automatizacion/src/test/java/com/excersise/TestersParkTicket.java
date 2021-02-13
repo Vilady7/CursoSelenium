@@ -20,6 +20,21 @@ public class TestersParkTicket extends TicketsParks {
 		
 	}
 	
+	
+	// Constructor (Overloading)
+	public TestersParkTicket(double price, int personAge, boolean studentID, double discont) {
+		super();
+		adultTicket = price - discont;
+		childTicket = price * (.60) - discont;
+		studentTicket = price * (.30) - discont;
+		age = personAge;
+		student = studentID;
+		priceDay = "Children's Day Price";
+		park = "Testers Park - ";
+
+	}
+
+	
 	//Encapsulation
 	//setter
 	private void setPriceDay(String priceDay) {
@@ -35,16 +50,31 @@ public class TestersParkTicket extends TicketsParks {
 	@Override
 	public double getTicketPrice() {
 		double priceTicket;
-		if(student == true) {
-			priceTicket = studentTicket;
-			System.out.println("Student Price (50% applied): $"+studentTicket);
-		}else if (age>=18) {
-			priceTicket = adultTicket;
-			System.out.println("Adult Price: $"+adultTicket);
-		}else {
-			priceTicket = childTicket;
-			System.out.println("Child Price (20% applied): $"+childTicket);
-		}
+//		if(student == true) {
+//		priceTicket = studentTicket;
+//		System.out.println("Student Price (50% applied): $"+studentTicket);
+//	}else if (age>=18) {
+//		priceTicket = adultTicket;
+//		System.out.println("Adult Price: $"+adultTicket);
+//	}else {
+//		priceTicket = childTicket;
+//		System.out.println("Child Price (20% applied): $"+childTicket);
+//	}
+	
+	if (age >= 18 && !student) {
+		priceTicket = adultTicket;
+		System.out.println("Adult Price: $" + adultTicket);
+	} else if (age >= 18 && student) {
+		priceTicket = studentTicket;
+		System.out.println("Student Price (50% applied): $" + studentTicket);
+	} else if (age < 18 && student) {
+		priceTicket = studentTicket * (0.80);
+		System.out.println("Child & Student Special Price: (80% applied) ");
+		System.out.println("Child & Student Special Price: $" + priceTicket);
+	} else {
+		priceTicket = childTicket;
+		System.out.println("Child Price (20% applied): $" + childTicket);
+	}
 		return priceTicket;
 		
 	}

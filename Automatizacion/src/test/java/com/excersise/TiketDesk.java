@@ -7,7 +7,7 @@ public class TiketDesk {
 		
 		double priceCoolPark = 150;
 		double priceTestersPark = 160;
-		int age = 25;
+		int age = 12;
 		boolean student = true;
 		
 //		CoolParkTicket coolPark = new CoolParkTicket(priceCoolPark, age, student);
@@ -18,13 +18,31 @@ public class TiketDesk {
 //		testersPark.printPriceDay();
 //		testersPark.getTicketPrice();	
 		
+//		TicketsParks ticket = new CoolParkTicket(priceCoolPark, age, student);
+//		ticket.printPriceDay();
+//		ticket.getTicketPrice();
+		
+//		ticket = new TestersParkTicket(priceTestersPark, age, student); // Polimorfismo
+//		ticket.printPriceDay();
+//		ticket.getTicketPrice();
+		
 		TicketsParks ticket = new CoolParkTicket(priceCoolPark, age, student);
 		ticket.printPriceDay();
-		ticket.getTicketPrice();
+		double priceCoolTicket= ticket.getTicketPrice();
 		
-		ticket = new TestersParkTicket(priceTestersPark, age, student); //Polimorfismo
+		ticket = new TestersParkTicket(priceTestersPark, age, student, 10); //Polimorfismo
 		ticket.printPriceDay();
-		ticket.getTicketPrice();
+		double priceTestersTicket= ticket.getTicketPrice();
+
+		double totalPrice = sumTicketsParks(priceCoolTicket, priceTestersTicket);
+
+		System.out.println("Total Tickets: $"+totalPrice);
+
 	}
+	
+	public static double sumTicketsParks(double park1, double park2) {
+		return park1 + park2;
+	}
+
 
 }

@@ -1,14 +1,14 @@
 package com.excersise;
 
-public class CoolParkTicket extends TicketsParks{
-	
+public class CoolParkTicket extends TicketsParks {
+
 	double adultTicket, childTicket, studentTicket;
 	int age;
 	boolean student = false;
 	String priceDay, park;
-	
-	//Constructor
-	public CoolParkTicket (double price, int personAge, boolean studentId) {
+
+	// Constructor
+	public CoolParkTicket(double price, int personAge, boolean studentId) {
 		super();
 		age = personAge;
 		student = studentId;
@@ -17,21 +17,21 @@ public class CoolParkTicket extends TicketsParks{
 		studentTicket = price * (.50);
 		priceDay = "Normal Day Price";
 		park = "Cool Park";
-		
+
 	}
-	
-	//Encapsulation
-	//setter
+
+	// Encapsulation
+	// setter
 	private void setPriceDay(String priceDay) {
 		this.priceDay = priceDay;
 	}
 
-	//getter
+	// getter
 	private String getPriceDay(String priceDay) {
 		return priceDay;
 	}
-	
-	//METODO
+
+	// METODO
 	@Override
 	public double getTicketPrice() {
 		double priceTicket;
@@ -45,21 +45,35 @@ public class CoolParkTicket extends TicketsParks{
 			priceTicket = childTicket;
 			System.out.println("Child Price (20% applied): $"+childTicket);
 		}
+
+//		if (age >= 18 && !student) {
+//			priceTicket = adultTicket;
+//			System.out.println("Adult Price: $" + adultTicket);
+//		} else if (age >= 18 && student) {
+//			priceTicket = studentTicket;
+//			System.out.println("Student Price (50% applied): $" + studentTicket);
+//		} else if (age < 18 && student) {
+//			priceTicket = studentTicket * (0.80);
+//			System.out.println("Child & Student Special Price: $" + priceTicket);
+//		} else {
+//			priceTicket = childTicket;
+//			System.out.println("Child Price (20% applied): $" + childTicket);
+//		}
+
 		return priceTicket;
-		
+
 	}
-	
+
 	@Override
 	public void printPriceDay() {
-		System.out.println(welcomeMessageString()  + " "+ getPriceDay(priceDay));
+		System.out.println(welcomeMessageString() + " " + getPriceDay(priceDay));
 	}
-	
-	//Overloading
+
+	// Overloading
 	@Override
 	public void printPriceDay(String keyManager, String priceDay) {
 		setPriceDay(priceDay);
 		System.out.println(welcomeMessageString() + getPriceDay(priceDay));
 	}
-
 
 }
