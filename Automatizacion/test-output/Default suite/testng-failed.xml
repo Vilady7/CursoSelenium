@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.opensource.admin.qa.TC001_Admin_SearchEmployee">
+      <class name="com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist">
         <methods>
-          <include name="TC001_Admin_SearchEmployee_TC"/>
           <include name="afterTest"/>
+          <include name="TC002_Admin_SearchEmployee_NotExist_TC"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.opensource.admin.qa.TC001_Admin_SearchEmployee -->
+      </class> <!-- com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
