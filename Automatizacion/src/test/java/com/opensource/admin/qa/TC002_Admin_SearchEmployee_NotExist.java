@@ -13,17 +13,15 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class TC001_Admin_SearchEmployee {
+public class TC002_Admin_SearchEmployee_NotExist {
 
   @BeforeTest
   public void beforeTest() {
-	  
-	  // DATOS
+//	  DATOS
   }
   
   @Test
-  public void TC001_Admin_SearchEmployee_TC() {
-	  
+  public void TC002_Admin_SearchEmployee_NotExist_TC() {
 	  // STEP 1
 	  Reporter.log("Open Browser \"OrangeHRM\" web page");
 	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chrome/chromedriver.exe");
@@ -31,7 +29,7 @@ public class TC001_Admin_SearchEmployee {
 	  driver.get("https://opensource-demo.orangehrmlive.com/");
 	  driver.manage().window().maximize();
 	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	  
+
 	  // STEP 2
 	  Reporter.log("Enter Username and Password");
 	  driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("Admin");
@@ -43,7 +41,7 @@ public class TC001_Admin_SearchEmployee {
 	  Reporter.log("Validate that you have logged in successfully");
 	  WebDriverWait wait = new WebDriverWait(driver, 30);
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id = 'menu_admin_viewAdminModule']")));
-	  
+
 	  // STEP 4
 	  Reporter.log("Click Admin - Go to the admin page");
 	  driver.findElement(By.xpath("//a[@id = 'menu_admin_viewAdminModule']")).click();
@@ -51,22 +49,26 @@ public class TC001_Admin_SearchEmployee {
 	  
 	  // STEP 5
 	  Reporter.log("Search username in field");
-	  driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys("Admin");
-	  
+	  driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys("XYZ");
+
 	  // STEP 6
 	  Reporter.log("Click Search");
 	  driver.findElement(By.xpath("//input[@id = 'searchBtn']")).click();
 	  
 	  // STEP 7
-	  Reporter.log("Verify username exist in table");
-	  String actualUsername = driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText();
-//	  Assert.assertEquals(actualUsername, "Admin");
+	  Reporter.log("Verify username is not exist in table");
+	  String actualUsername = driver.findElement(By.xpath("//tbody/tr[1]/td[1]")).getText();
+
+//	  Assert.assertEquals(actualUsername, "No Records Found");
+//	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	  
 	  
 	  SoftAssert soft = new SoftAssert();
-	  soft.assertEquals(actualUsername, "Admin");
+	  soft.assertEquals(actualUsername, "No Records Found");
 	  
 	  // STEP 8
 	  Reporter.log("Log out");
+//	  driver.findElement(By.xpath("//a[@id='systemUser-information']")).click();
 	  driver.findElement(By.xpath("//a[@id='welcome']")).click();
 	  driver.findElement(By.xpath("//a[contains(text(), 'Logout')]")).click();
 	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -77,6 +79,7 @@ public class TC001_Admin_SearchEmployee {
 	  
 	  soft.assertAll();
 	
+	  
   }
 
   @AfterTest
