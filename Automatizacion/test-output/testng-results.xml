@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open Browser "OrangeHRM" web page]]>
+      <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
     </line>
     <line>
-      <![CDATA[Enter Username and Password]]>
+      <![CDATA[Login into Orange open source]]>
     </line>
     <line>
       <![CDATA[Validate that you have logged in successfully]]>
@@ -17,34 +17,31 @@
       <![CDATA[Search username in field]]>
     </line>
     <line>
-      <![CDATA[Click Search]]>
+      <![CDATA[Verify value in search table]]>
     </line>
     <line>
-      <![CDATA[Verify username exist in table]]>
-    </line>
-    <line>
-      <![CDATA[Log out]]>
+      <![CDATA[Logout into Orange open source]]>
     </line>
     <line>
       <![CDATA[Close Browser]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17278" started-at="2021-02-16T08:11:03 COT" finished-at="2021-02-16T08:11:20 COT">
+  <suite name="Default suite" duration-ms="18079" started-at="2021-02-20T13:31:02 COT" finished-at="2021-02-20T13:31:20 COT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17278" started-at="2021-02-16T08:11:03 COT" finished-at="2021-02-16T08:11:20 COT">
-      <class name="com.opensource.admin.qa.TC001_Admin_SearchEmployee">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee@131276c2]" name="beforeTest" is-config="true" duration-ms="15" started-at="2021-02-16T08:11:03 COT" finished-at="2021-02-16T08:11:03 COT">
+    <test name="Default test" duration-ms="18079" started-at="2021-02-20T13:31:02 COT" finished-at="2021-02-20T13:31:20 COT">
+      <class name="com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@2d6eabae]" name="beforeTest" is-config="true" duration-ms="6559" started-at="2021-02-20T13:31:02 COT" finished-at="2021-02-20T13:31:09 COT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC001_Admin_SearchEmployee_TC()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee@131276c2]" name="TC001_Admin_SearchEmployee_TC" duration-ms="17210" started-at="2021-02-16T08:11:03 COT" finished-at="2021-02-16T08:11:20 COT">
+        <test-method status="PASS" signature="TC001_Admin_SearchEmployee_POM_TestScript()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@2d6eabae]" name="TC001_Admin_SearchEmployee_POM_TestScript" duration-ms="11171" started-at="2021-02-20T13:31:09 COT" finished-at="2021-02-20T13:31:20 COT">
           <reporter-output>
             <line>
-              <![CDATA[Open Browser "OrangeHRM" web page]]>
+              <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
             </line>
             <line>
-              <![CDATA[Enter Username and Password]]>
+              <![CDATA[Login into Orange open source]]>
             </line>
             <line>
               <![CDATA[Validate that you have logged in successfully]]>
@@ -56,24 +53,21 @@
               <![CDATA[Search username in field]]>
             </line>
             <line>
-              <![CDATA[Click Search]]>
+              <![CDATA[Verify value in search table]]>
             </line>
             <line>
-              <![CDATA[Verify username exist in table]]>
+              <![CDATA[Logout into Orange open source]]>
             </line>
-            <line>
-              <![CDATA[Log out]]>
-            </line>
+          </reporter-output>
+        </test-method> <!-- TC001_Admin_SearchEmployee_POM_TestScript -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@2d6eabae]" name="afterTest" is-config="true" duration-ms="279" started-at="2021-02-20T13:31:20 COT" finished-at="2021-02-20T13:31:20 COT">
+          <reporter-output>
             <line>
               <![CDATA[Close Browser]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TC001_Admin_SearchEmployee_TC -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee@131276c2]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-02-16T08:11:20 COT" finished-at="2021-02-16T08:11:20 COT">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.opensource.admin.qa.TC001_Admin_SearchEmployee -->
+      </class> <!-- com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
