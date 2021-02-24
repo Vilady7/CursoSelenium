@@ -6,6 +6,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchSessionException;
@@ -17,13 +24,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
 public class SeleniumWrapper {
 
@@ -205,6 +205,19 @@ public class SeleniumWrapper {
 			return null;
 		} catch (IOException e1) {
 			e1.printStackTrace();
+			return null;
+		}
+	}
+	
+	/*
+	 * Get Value from Table
+	 * @author Ricardo Avalos 
+	 * @date 02/23/2021
+	 */
+	public String getValueFromTable(String row, String column) {
+		try {
+			return driver.findElement(By.xpath("//tbody/tr["+row+"]/td["+column+"]")).getText();
+			}catch(NoSuchElementException e) {
 			return null;
 		}
 	}
