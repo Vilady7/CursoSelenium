@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
     <line>
       <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
+    </line>
+    <line>
+      <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
+    </line>
+    <line>
+      <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
+    </line>
+    <line>
+      <![CDATA[Login into Orange open source]]>
+    </line>
+    <line>
+      <![CDATA[Login into Orange open source]]>
     </line>
     <line>
       <![CDATA[Login into Orange open source]]>
@@ -11,92 +23,82 @@
       <![CDATA[Validate that you have logged in successfully]]>
     </line>
     <line>
+      <![CDATA[Validate that you have logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Validate that you have logged in successfully]]>
+    </line>
+    <line>
       <![CDATA[Click Admin - Go to the admin page]]>
+    </line>
+    <line>
+      <![CDATA[Click Admin - Go to the admin page]]>
+    </line>
+    <line>
+      <![CDATA[Click Admin - Go to the admin page]]>
+    </line>
+    <line>
+      <![CDATA[Search username in field]]>
+    </line>
+    <line>
+      <![CDATA[Click Add]]>
+    </line>
+    <line>
+      <![CDATA[Search username in field]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Employee Name]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid username]]>
+    </line>
+    <line>
+      <![CDATA[Enter new password and confirm]]>
+    </line>
+    <line>
+      <![CDATA[Verify value in search table]]>
+    </line>
+    <line>
+      <![CDATA[Logout into Orange open source]]>
+    </line>
+    <line>
+      <![CDATA[Click Save]]>
+    </line>
+    <line>
+      <![CDATA[Verify value in search table]]>
+    </line>
+    <line>
+      <![CDATA[Logout into Orange open source]]>
+    </line>
+    <line>
+      <![CDATA[Close Browser]]>
+    </line>
+    <line>
+      <![CDATA[Close Browser]]>
+    </line>
+    <line>
+      <![CDATA[Search username in field]]>
+    </line>
+    <line>
+      <![CDATA[Verify value in search table]]>
+    </line>
+    <line>
+      <![CDATA[Logout into Orange open source]]>
     </line>
     <line>
       <![CDATA[Close Browser]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29704" started-at="2021-02-24T00:02:35 COT" finished-at="2021-02-24T00:03:05 COT">
+  <suite name="QA_Regression" duration-ms="44617" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:49:29 COT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29704" started-at="2021-02-24T00:02:35 COT" finished-at="2021-02-24T00:03:05 COT">
-      <class name="com.opensource.admin.qa.TC003_Admin_AddNewUser_POM">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@2d6eabae]" name="beforeTest" is-config="true" duration-ms="7023" started-at="2021-02-24T00:02:35 COT" finished-at="2021-02-24T00:02:42 COT">
+    <test name="TC001" duration-ms="38927" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:49:24 COT">
+      <class name="com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@1046d517]" name="beforeTest" is-config="true" duration-ms="8292" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:48:53 COT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="TC002_Admin_SearchEmployee_NotExist_POM_TestScript()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@2d6eabae]" name="TC002_Admin_SearchEmployee_NotExist_POM_TestScript" duration-ms="22296" started-at="2021-02-24T00:02:42 COT" finished-at="2021-02-24T00:03:04 COT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id = 'menu_admin_viewAdminModule']"}
-  (Session info: chrome=88.0.4324.182)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M2PQ0HF', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:65396}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1c9dbc9289cdc5ea00ddfe836c3a2d89
-*** Element info: {Using=xpath, value=//a[@id = 'menu_admin_viewAdminModule']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id = 'menu_admin_viewAdminModule']"}
-  (Session info: chrome=88.0.4324.182)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M2PQ0HF', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:65396}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1c9dbc9289cdc5ea00ddfe836c3a2d89
-*** Element info: {Using=xpath, value=//a[@id = 'menu_admin_viewAdminModule']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.opensource.base.SeleniumWrapper.click(SeleniumWrapper.java:108)
-at com.opensource.admin.UserManagement.clickAdmin(UserManagement.java:40)
-at com.opensource.admin.qa.TC003_Admin_AddNewUser_POM.TC002_Admin_SearchEmployee_NotExist_POM_TestScript(TC003_Admin_AddNewUser_POM.java:53)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="TC001_Admin_SearchEmployee_POM_TestScript()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@1046d517]" name="TC001_Admin_SearchEmployee_POM_TestScript" duration-ms="29360" started-at="2021-02-27T12:48:53 COT" finished-at="2021-02-27T12:49:22 COT">
           <reporter-output>
             <line>
               <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
@@ -110,9 +112,113 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Click Admin - Go to the admin page]]>
             </line>
+            <line>
+              <![CDATA[Search username in field]]>
+            </line>
+            <line>
+              <![CDATA[Verify value in search table]]>
+            </line>
+            <line>
+              <![CDATA[Logout into Orange open source]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC001_Admin_SearchEmployee_POM_TestScript -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM@1046d517]" name="afterTest" is-config="true" duration-ms="1247" started-at="2021-02-27T12:49:22 COT" finished-at="2021-02-27T12:49:24 COT">
+          <reporter-output>
+            <line>
+              <![CDATA[Close Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM -->
+    </test> <!-- TC001 -->
+    <test name="TC002" duration-ms="41088" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:49:26 COT">
+      <class name="com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist_POM">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist_POM@3cdf2c61]" name="beforeTest" is-config="true" duration-ms="7195" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:48:52 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="TC002_Admin_SearchEmployee_NotExist_POM_TestScript()[pri:0, instance:com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist_POM@3cdf2c61]" name="TC002_Admin_SearchEmployee_NotExist_POM_TestScript" duration-ms="32470" started-at="2021-02-27T12:48:52 COT" finished-at="2021-02-27T12:49:24 COT">
+          <reporter-output>
+            <line>
+              <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
+            </line>
+            <line>
+              <![CDATA[Login into Orange open source]]>
+            </line>
+            <line>
+              <![CDATA[Validate that you have logged in successfully]]>
+            </line>
+            <line>
+              <![CDATA[Click Admin - Go to the admin page]]>
+            </line>
+            <line>
+              <![CDATA[Search username in field]]>
+            </line>
+            <line>
+              <![CDATA[Verify value in search table]]>
+            </line>
+            <line>
+              <![CDATA[Logout into Orange open source]]>
+            </line>
           </reporter-output>
         </test-method> <!-- TC002_Admin_SearchEmployee_NotExist_POM_TestScript -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@2d6eabae]" name="afterTest" is-config="true" duration-ms="295" started-at="2021-02-24T00:03:04 COT" finished-at="2021-02-24T00:03:05 COT">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist_POM@3cdf2c61]" name="afterTest" is-config="true" duration-ms="1304" started-at="2021-02-27T12:49:24 COT" finished-at="2021-02-27T12:49:26 COT">
+          <reporter-output>
+            <line>
+              <![CDATA[Close Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.opensource.admin.qa.TC002_Admin_SearchEmployee_NotExist_POM -->
+    </test> <!-- TC002 -->
+    <test name="TC003" duration-ms="44617" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:49:29 COT">
+      <class name="com.opensource.admin.qa.TC003_Admin_AddNewUser_POM">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@6ce86ce1]" name="beforeTest" is-config="true" duration-ms="7192" started-at="2021-02-27T12:48:45 COT" finished-at="2021-02-27T12:48:52 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="TC002_Admin_SearchEmployee_NotExist_POM_TestScript()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@6ce86ce1]" name="TC002_Admin_SearchEmployee_NotExist_POM_TestScript" duration-ms="37018" started-at="2021-02-27T12:48:52 COT" finished-at="2021-02-27T12:49:29 COT">
+          <reporter-output>
+            <line>
+              <![CDATA[Launching...https://opensource-demo.orangehrmlive.com/]]>
+            </line>
+            <line>
+              <![CDATA[Login into Orange open source]]>
+            </line>
+            <line>
+              <![CDATA[Validate that you have logged in successfully]]>
+            </line>
+            <line>
+              <![CDATA[Click Admin - Go to the admin page]]>
+            </line>
+            <line>
+              <![CDATA[Click Add]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Employee Name]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid username]]>
+            </line>
+            <line>
+              <![CDATA[Enter new password and confirm]]>
+            </line>
+            <line>
+              <![CDATA[Click Save]]>
+            </line>
+            <line>
+              <![CDATA[Search username in field]]>
+            </line>
+            <line>
+              <![CDATA[Verify value in search table]]>
+            </line>
+            <line>
+              <![CDATA[Logout into Orange open source]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC002_Admin_SearchEmployee_NotExist_POM_TestScript -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser_POM@6ce86ce1]" name="afterTest" is-config="true" duration-ms="285" started-at="2021-02-27T12:49:29 COT" finished-at="2021-02-27T12:49:29 COT">
           <reporter-output>
             <line>
               <![CDATA[Close Browser]]>
@@ -120,6 +226,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.opensource.admin.qa.TC003_Admin_AddNewUser_POM -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TC003 -->
+  </suite> <!-- QA_Regression -->
 </testng-results>

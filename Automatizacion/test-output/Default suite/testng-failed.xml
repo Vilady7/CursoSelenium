@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.opensource.admin.qa.TC003_Admin_AddNewUser_POM">
+      <class name="com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM">
         <methods>
-          <include name="TC002_Admin_SearchEmployee_NotExist_POM_TestScript"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="TC001_Admin_SearchEmployee_POM_TestScript"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- com.opensource.admin.qa.TC003_Admin_AddNewUser_POM -->
+      </class> <!-- com.opensource.admin.qa.TC001_Admin_SearchEmployee_POM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,10 +1,13 @@
 package com.opensource.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -24,6 +27,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
 
 public class SeleniumWrapper {
 
@@ -64,6 +70,7 @@ public class SeleniumWrapper {
 		reporterLog("Launching..." + url);
 		driver.get(url);
 		driver.manage().window().maximize();
+		takeScreenshot("Launching");
 		implicitlyWait(5);
 	}
 
@@ -165,7 +172,7 @@ public class SeleniumWrapper {
 	 * @param jsonFile, jsonObjName, jsonKey
 	 * @return jsonValue
 	 * @throws FileNotFoundException
-	 */
+	 
 	public String getJSONValue(String jsonFile, String jsonObjName, String jsonKey) throws FileNotFoundException {
 		try {
 
@@ -181,7 +188,10 @@ public class SeleniumWrapper {
 			Assert.fail("JSON file is not found");
 			return null;
 		}
-	}
+	}*/
+	
+
+	
 
 	/*
 	 * Get Value from Excel
@@ -221,5 +231,48 @@ public class SeleniumWrapper {
 			return null;
 		}
 	}
+	
+	//nuevo JSON
+	/**
+	 * Get Data from JSON file (Directly)
+	 * 
+	 * @author Ricardo Avalos
+	 * @param jsonFile, jsonKey
+	 * @return jsonValue
+	 * @throws FileNotFoundException
+	 */
+	public String getJSONValue(String jsonFileObj, String jsonKey) throws FileNotFoundException {
+		try {
+
+			// JSON Data
+			InputStream inputStream = new FileInputStream(GlobalVariables.PATH_JSON_DATA + jsonFileObj + ".json");
+			JSONObject jsonObject = new JSONObject(new JSONTokener(inputStream));
+
+			// Get Data
+			String jsonValue = (String) jsonObject.getJSONObject(jsonFileObj).get(jsonKey);
+			return jsonValue;
+
+		} catch (FileNotFoundException e) {
+			Assert.fail("JSON file is not found");
+			return null;
+		}
+	}
+
+	
+	/*
+	 * Take screenshot
+	 * 
+	 * @author Ricardo Avalos
+	 * @throws IOException
+	 */
+	public void takeScreenshot(String fileName){
+		try {
+			Screenshot screenshot = new AShot().takeScreenshot(driver);
+			ImageIO.write(screenshot.getImage(), "PNG", new File(GlobalVariables.PATH_SCREENSHOTS + fileName + ".png"));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
 
 }
